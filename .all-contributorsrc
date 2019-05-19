@@ -1,0 +1,37 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "Nicolasipr",
+      "name": "Nicolas Perez Roa",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/28127021?v=4",
+      "profile": "https://github.com/Nicolasipr",
+      "contributions": [
+        "code",
+        "ideas",
+        "translation",
+        "projectManagement"
+      ]
+    },
+    {
+      "login": "vabustamantem",
+      "name": "vabustamantem",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/33134921?v=4",
+      "profile": "https://github.com/vabustamantem",
+      "contributions": [
+        "design",
+        "code"
+      ]
+      }
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "Te-de-Tetera",
+  "projectOwner": "Nicolasipr",
+  "repoType": "github",
+  "repoHost": "https://github.com"
+}
