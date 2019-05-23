@@ -1,5 +1,5 @@
 # Te de Tetera 
-[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors)
+[![All Contributors](https://img.shields.io/badge/all_contributors-3-orange.svg?style=flat-square)](#contributors)
 
 Una implementación de e-commercer para Te de Tetera por estudiantes de pregrado de la Universidad Tecnológica Metropolitana de Chile 
 
@@ -54,23 +54,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore -->
-
-<table>
-    <tr>
-        <td align="center"><a href="https://github.com/Nicolasipr"><img
-                    src="https://avatars0.githubusercontent.com/u/28127021?v=4" width="100px;"
-                    alt="Nicolas Perez Roa" /><br /><sub><b>Nicolas Perez Roa</b></sub></a><br /><a
-                href="https://github.com/Nicolasipr/Te-de-Tetera/commits?author=Nicolasipr" title="Code">💻</a> <a
-                href="#ideas-Nicolasipr" title="Ideas, Planning, & Feedback">🤔</a> <a href="#translation-Nicolasipr"
-                title="Translation">🌍</a> <a href="#projectManagement-Nicolasipr" title="Project Management">📆</a>
-        </td>
-        <td align="center"><a href="https://github.com/vabustamantem"><img
-                    src="https://avatars0.githubusercontent.com/u/33134921?v=4" width="100px;"
-                    alt="vabustamantem" /><br /><sub><b>vabustamantem</b></sub></a><br /><a href="#design-vabustamantem"
-                title="Design">🎨</a> <a href="https://github.com/Nicolasipr/Te-de-Tetera/commits?author=vabustamantem"
-                title="Code">💻</a></td>
-    </tr>
-</table>
+<table><tr><td align="center"><a href="https://github.com/Nicolasipr"><img src="https://avatars0.githubusercontent.com/u/28127021?v=4" width="100px;" alt="Nicolas Perez Roa"/><br /><sub><b>Nicolas Perez Roa</b></sub></a><br /><a href="https://github.com/Nicolasipr/Te-De-Tetera/commits?author=Nicolasipr" title="Code">💻</a> <a href="#ideas-Nicolasipr" title="Ideas, Planning, & Feedback">🤔</a> <a href="#translation-Nicolasipr" title="Translation">🌍</a> <a href="#projectManagement-Nicolasipr" title="Project Management">📆</a></td><td align="center"><a href="https://github.com/vabustamantem"><img src="https://avatars0.githubusercontent.com/u/33134921?v=4" width="100px;" alt="vabustamantem"/><br /><sub><b>vabustamantem</b></sub></a><br /><a href="#design-vabustamantem" title="Design">🎨</a> <a href="https://github.com/Nicolasipr/Te-De-Tetera/commits?author=vabustamantem" title="Code">💻</a></td><td align="center"><a href="https://github.com/Walaleitor"><img src="https://avatars2.githubusercontent.com/u/7455995?v=4" width="100px;" alt="Sebastián Nicolás Salazar Pulgar"/><br /><sub><b>Sebastián Nicolás Salazar Pulgar</b></sub></a><br /><a href="https://github.com/Nicolasipr/Te-De-Tetera/commits?author=Walaleitor" title="Code">💻</a> <a href="#ideas-Walaleitor" title="Ideas, Planning, & Feedback">🤔</a></td></tr></table>
 
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
