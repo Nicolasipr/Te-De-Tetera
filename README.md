@@ -9,28 +9,44 @@ Te de Tetera's e-commerce implementation assignment by Metropolitan University o
 
 Detailed information about how to use this demo
 
+Explain about how this demo works on this Heroku site implementation. * add site *
+
 
 ### Pre-requisites 
 
-We are using [Some Framework](google.com) to do something
+We are developing a Full-Stack web app with MEVN [MongoDB](https://www.mongodb.com/) [Express.js](https://expressjs.com)  [Vue.js](https://vuejs.org/)  [Node.js](https://nodejs.org) focusing in a noSQL ecommerce web app, using Vue.js as client side frontend, solving api request using express.js and mongoDB to fetch our requests.
 
+How to install it
+
+```
+Some Code
+
+```
+```
+Some Code
+
+```
+```
+Some Code
+
+```
 ```
 Some Code
 
 ```
 ## TO-DO
 
-- [x] Put some task 
-- [ ] Task 2 
-- [ ] Task 3 
-- [ ] Task 4 
-- [ ] Task 5 
-- [ ] Task 6 
-- [ ] Task 7
+- [x] Creating Express and MongoDB connection 
+- [x] Vue init
+- [ ] noSQL documents  
+- [ ] Vue routing 
+- [ ] Vue frontend 
+- [ ] Testing 
+- [ ] Test 1
 
 ## Authors and Acknowledgment 
 
-Special thanks to
+Special thanks to Te de Tetera, to our professor Patricia Mellado and our team for making this project successfull  
 
 ## Contributors
 
