@@ -7,9 +7,12 @@ Te de Tetera's e-commerce implementation assignment by Metropolitan University o
 
 ## Installing
 
+La información de como funciona e instala la siguiente aplicación estará detallada desde este punto, si quieres ver el [demo](https://te-de-tetera.herokuapp.com/) implementado con [Heroku](https://dashboard.heroku.com/)
+utilizando a su vez un servidor de amazon web services [AWS](https://aws.amazon.com/).
+
 Detailed information about how to use this demo
 
-Explain about how this demo works on this Heroku site implementation. * add site *
+Explain about how this demo works on this Heroku site implementation [demo](https://te-de-tetera.herokuapp.com/)
 
 
 ### Pre-requisites 
@@ -38,7 +41,7 @@ Some Code
 
 - [x] Creating Express and MongoDB connection 
 - [x] Vue init
-- [ ] noSQL documents  
+- [x] noSQL documents  
 - [ ] Vue routing 
 - [ ] Vue frontend 
 - [ ] Testing 

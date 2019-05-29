@@ -16,6 +16,10 @@ app.use(express.json()); // fixes null parser from body in postman
 
 app.use(require('./routes/index'));
 
+
+const products = require('./routes/products.route'); // imports route for products
+app.use('/products', products );
+
 const posts = require('./routes/api/posts');
 app.use('/api/posts', posts);
 
@@ -28,4 +32,4 @@ mongoose.connect(process.env.URLDB, { useCreateIndex: true, useNewUrlParser: tru
 
 app.listen(process.env.PORT, () => {
     console.log(`Escuchando puerto ${process.env.PORT}`.black.bgCyan);
-})
+});

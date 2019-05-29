@@ -4,6 +4,11 @@ const uniqueValidator = require('mongoose-unique-validator');
 const Schema = mongoose.Schema;
 
 let usuarioSchema = new Schema({
+    username: {
+        type: String,
+        required: [true, 'El nombre de usuario es obligatorio'],
+        unique: true
+    },
     email: {
         type: String,
         required: [true, 'El email es obligatorio'],
@@ -23,6 +28,10 @@ let usuarioSchema = new Schema({
     estado: {
         type: Boolean,
         default: true
+    },
+    createdAt: {
+        type: String,
+        default: new Date()
     }
 
 });

@@ -15,7 +15,9 @@ router.post('/usuario', (req, res) => {
 
     let usuario = new Usuario({
         email: body.email,
+        username: '',
         password: bcrypt.hashSync(body.password, 10),
+        createdAt: new Date()
     });
 
     usuario.save((err, usuarioNuevo) => {
@@ -70,7 +72,6 @@ router.delete('/usuario/:id', verificaToken, (req, res) => {
     })
 
 })
-
 
 
 
