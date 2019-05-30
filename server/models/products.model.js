@@ -13,7 +13,11 @@ let ProductSchema = new Schema({
     },
     description: {
       type: String
-    }
+    },
+    categories: [{
+     type:  Schema.Types.ObjectId,
+      ref: 'Category'
+    }]
 });
 
 module.exports = mongoose.model('Products', ProductSchema);

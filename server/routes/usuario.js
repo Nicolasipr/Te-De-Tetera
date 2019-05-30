@@ -4,7 +4,6 @@ const bcrypt = require('bcrypt');
 const { verificaToken } = require('../middlewares/auth')
 
 
-
 const router = express.Router();
 
 
@@ -15,7 +14,7 @@ router.post('/usuario', (req, res) => {
 
     let usuario = new Usuario({
         email: body.email,
-        username: '',
+        username: body.username,
         password: bcrypt.hashSync(body.password, 10),
         createdAt: new Date()
     });
@@ -27,13 +26,21 @@ router.post('/usuario', (req, res) => {
                 err
             });
         }
-
-        res.json({
-            ok: true,
-            usuario: usuarioNuevo
-        });
+        res.send("Usuario Creado satisfactoriamente")
+        //this causes some error
+        // res.json({
+        //     ok: true,
+        //     usuario: usuarioNuevo
+        // });
     })
 
+});
+
+router.get('/usuario/all', (req, res) => {
+   Usuario.find({}, (err, usuarios) => {
+       if (err) return err;
+       res.send(usuarios)
+   })
 });
 
 router.get('/usuario', verificaToken, (req, res) => {
