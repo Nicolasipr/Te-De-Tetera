@@ -3,9 +3,9 @@ const Schema = mongoose.Schema;
 
 let ProductSchema = new Schema({
    name: {
-       type: String,
-       required: true,
-       max: 100
+      type: String,
+      required: true,
+      max: 100
    },
     price:{
        type: Number,
@@ -14,10 +14,14 @@ let ProductSchema = new Schema({
     description: {
       type: String
     },
-    categories: [{
-     type:  Schema.Types.ObjectId,
-      ref: 'Category'
-    }]
+    stock: {
+      type: Number,
+      default: 0
+    },
+    state: {
+      type: Boolean,
+      default: true
+    }
 });
 
 module.exports = mongoose.model('Products', ProductSchema);

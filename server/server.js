@@ -21,11 +21,18 @@ app.use(require('./routes/index'));
     // PRODUCTS !!!
     const products = require('./routes/products.route'); // imports route for products
     app.use('/products', products );
+    const productsCategory = require('./routes/productCategory.route');
+    app.use('/products-category', productsCategory);
 
     // CATEGORIES
     const category = require('./routes/categories.route'); // imports route for category
     app.use('/categories', category );
 
+    // PURCHASE
+    const purchase = require('./routes/purchase.route');
+    app.use('/purchase', purchase);
+    const purchaseOrder = require('./routes/purchaseOrder.route');
+    app.use('/purchase-order', purchaseOrder);
     // TESTING
     const posts = require('./routes/api/posts');
     app.use('/api/posts', posts);

@@ -26,12 +26,11 @@ router.post('/usuario', (req, res) => {
                 err
             });
         }
-        res.send("Usuario Creado satisfactoriamente")
-        //this causes some error
-        // res.json({
-        //     ok: true,
-        //     usuario: usuarioNuevo
-        // });
+
+        return res.json({
+            ok: true,
+            usuario: usuarioNuevo
+        });
     })
 
 });
