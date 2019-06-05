@@ -33,6 +33,9 @@ app.use(require('./routes/index'));
     app.use('/purchase', purchase);
     const purchaseOrder = require('./routes/purchaseOrder.route');
     app.use('/purchase-order', purchaseOrder);
+    // SIZES
+    const size = require('./routes/sizes.routes');
+    app.use('/size', size);
     // TESTING
     const posts = require('./routes/api/posts');
     app.use('/api/posts', posts);

@@ -11,8 +11,7 @@ app.use(require('./categories.route'));
 app.use(require('./productCategory.route'));
 app.use(require('./purchase.route'));
 app.use(require('./purchaseOrder.route'));
-
-
+app.use(require('./sizes.routes'));
 
 
 module.exports = app;

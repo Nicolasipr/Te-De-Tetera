@@ -14,7 +14,8 @@ exports.product_create = function (req, res) {
       name: req.body.name,
       price: req.body.price,
       description: req.body.description,
-      categories: req.body.categories
+      stock: req.body.stock,
+      size: req.body.size
     }
   );
 

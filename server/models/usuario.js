@@ -9,6 +9,14 @@ let usuarioSchema = new Schema({
         required: [true, 'El nombre de usuario es obligatorio'],
         unique: true
     },
+    firstName: {
+      type: String,
+      required: [ true, 'El nombre es un campo obligatorio']
+    },
+    lastName:{
+        type: String,
+        required: [ true, 'El nombre es un campo obligatorio']
+    },
     email: {
         type: String,
         required: [true, 'El email es obligatorio'],

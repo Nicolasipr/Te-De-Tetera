@@ -18,10 +18,18 @@ let ProductSchema = new Schema({
       type: Number,
       default: 0
     },
+    size:{
+     type: Schema.Types.ObjectId,
+      ref: 'Size'
+    },
     state: {
       type: Boolean,
       default: true
-    }
+    },
+  createdAt: {
+    type: String,
+    default: new Date()
+  }
 });
 
 module.exports = mongoose.model('Products', ProductSchema);

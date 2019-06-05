@@ -6,6 +6,14 @@ let CategoriesSchema = new Schema({
   name: {
     type: String,
     required: [true, 'El nombre de la Categoria es Obligatorio']
+  },
+  state: {
+    type: Boolean,
+    default: true
+  },
+  createdAt: {
+    type: String,
+    default: new Date()
   }
 
 });

@@ -14,6 +14,8 @@ router.post('/usuario', (req, res) => {
 
     let usuario = new Usuario({
         email: body.email,
+        firstName: body.firstName,
+        lastName: body.lastName,
         username: body.username,
         password: bcrypt.hashSync(body.password, 10),
         createdAt: new Date()
