@@ -29,10 +29,12 @@ process.env.NODE_ENV = process.env.NODE_ENV || 'dev';
 
 
 if (process.env.NODE_ENV === 'dev') {
-    urlDB = 'mongodb://localhost:27017/te-de-teteras';
+
+    urlDB = 'mongodb+srv://admin:admin@te-de-tetera-4vpbw.mongodb.net/test?retryWrites=true';
+
 
 } else {
-    urlDB = process.env.MONGO_URI;
+    urlDB = 'mongodb://localhost:27017/te-de-teteras';
 }
 
 process.env.URLDB = urlDB;

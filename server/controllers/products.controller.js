@@ -1,7 +1,6 @@
 const Product = require('../models/products.model');
 const Category = require('../models/categories.model');
 
-
 exports.test = function (req, res) {
   res.send('Greetings from the Products Controller');
 };
@@ -36,21 +35,70 @@ exports.product_categories_create = function (req,res) {
 
 // Read
 
+exports.product_find_name = function (req, res) {
+  let word = req.params.word;
+  let regex = new RegExp(word, 'i'); // i ingnores upper and lower cases
+  Product.find({ name: regex}, function (err, product) {
+    if (err) {
+      return res.status(500).json({
+        ok: false,
+        err: err
+      });
+    }
+    if(product.length === 0){
+      return res.status(400).json({
+        ok: false,
+        err: {
+          message: 'Product not found'
+        }
+      })
+    }
+
+    res.send(product);
+  })
+    .where('name').ne(null)
+    .populate('size')
+    .exec( (err, product, size) => {
+      if(err)
+      console.log(product + size);
+    })
+
+};
+
 exports.product_all_details = function (req, res) {
-  if (err) throw err;
-    res.send("Todos los productos");
+   Product.find({})
+     .populate('size')
+     .exec(function(err, products, size) {
+      console.log(products + size);
+  })
+     .then(docs => {
+       console.log(docs);
+       res.status(200).json(docs);
+     })
+     .catch(err => {
+       console.log(err);
+       res.status(500).json({
+         err: err
+       });
+     });
 };
 
 exports.product_details = function (req, res) {
   Product.findById(req.params.id, function (err, product){
     if (err) return err;
     res.send(product);
-  });
+  })
+    .populate('size')
+    .exec( (err, size) => {
+      console.log("Populated Product" + size);
+    });
 };
 
 exports.product_categories_details = function (req,res) {
-  if (err) throw err;
-  res.send("Categorias del producto");
+  Product.find({}, function (err, products) {
+    if (err) return err;
+    res.send(products);
+  });
 };
 
 

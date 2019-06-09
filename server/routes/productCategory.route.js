@@ -5,4 +5,9 @@ const productCategory_controller = require('../controllers/productsCategory.cont
 
 router.get('/test', productCategory_controller.test);
 
+router.get('/:id', productCategory_controller.products_category_One);
+
+router.post('/create', productCategory_controller.products_category_create);
+
+
 module.exports = router;
