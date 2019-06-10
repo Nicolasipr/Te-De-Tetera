@@ -6,8 +6,15 @@ const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const cors = require('cors');
 
-
 const app = express();
+
+
+// // HEROKU
+//
+// var path = require('path');
+// var serveStatic = require('serve-static');
+// app.use(serveStatic(__dirname + "/dist"));
+
 
 //MiddleWare
 app.use(bodyParser.urlencoded({ extended: false }));
