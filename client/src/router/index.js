@@ -3,8 +3,7 @@ import Router from 'vue-router'
 import LandingPage from '@/components/LandingPage'
 import Posts from '@/components/Post'
 import AdminInsight from '@/components/AdminInsights'
-
-
+import Products from '@/components/Product'
 Vue.use(Router)
 
 export default new Router({
@@ -23,6 +22,11 @@ export default new Router({
       path: '/adminPage',
       name: 'AdminInsight',
       component: AdminInsight
+    },
+    {
+      path: '/products',
+      name: 'Products',
+      component: Products
     }
   ]
 })

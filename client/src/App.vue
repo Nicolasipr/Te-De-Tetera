@@ -3,14 +3,22 @@
     <!-- Navbar  -->
     <div id="navbar">
       <b-navbar toggleable="lg" type="dark" class="nav-background">
-        <b-navbar-brand href="#">Te de Tetera</b-navbar-brand>
+        <b-navbar-brand to="/">Te de Tetera</b-navbar-brand>
 
         <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
         <b-collapse id="nav-collapse" is-nav>
           <b-navbar-nav>
-            <b-nav-item href="#">Link</b-nav-item>
-            <b-nav-item href="#" disabled>Disabled</b-nav-item>
+            <b-nav-item >
+              <router-link tag="li" class="link" to="/products">
+                Products
+              </router-link>
+              </b-nav-item>
+            <b-nav-item >
+              <router-link tag="li" class="link" to="/us">
+                Contact Us
+              </router-link>
+            </b-nav-item>
           </b-navbar-nav>
 
           <!-- Right aligned nav items -->
@@ -23,10 +31,7 @@
             <b-nav-item-dropdown text="Lang" right>
               <b-dropdown-item href="#">EN</b-dropdown-item>
               <b-dropdown-item href="#">ES</b-dropdown-item>
-<!--              <b-dropdown-item href="#">RU</b-dropdown-item>-->
-<!--              <b-dropdown-item href="#">FA</b-dropdown-item>-->
             </b-nav-item-dropdown>
-
             <b-nav-item-dropdown right>
               <!-- Using 'button-content' slot -->
               <template slot="button-content"><em>User</em></template>
@@ -37,9 +42,30 @@
         </b-collapse>
       </b-navbar>
     </div>
-
     <!-- End NavBar -->
+<!--    CONTENT-->
     <router-view/>
+<!-- END CONTENT-->
+<!--    FOOTER -->
+    <b-container fluid class="footer">
+    <b-row class="Footer-col">
+      <b-col md="4" align-self="center">
+        <h1> Te de Tetera</h1>
+      </b-col>
+      <b-col md="4" align-self="center">
+        <br>
+        <h6>Products</h6>
+        <h6>About Us</h6>
+        <h6>Contact Us</h6>
+      </b-col>
+      <b-col md="4" align-self="center">
+        <br>
+        <h6>Facebook</h6>
+        <h6>Instagram</h6>
+      </b-col>
+    </b-row>
+    </b-container>
+<!--    END FOOTER-->
   </div>
 </template>
 
@@ -59,7 +85,21 @@ export default {
   /*margin-top: 60px;*/
 }
 .nav-background{
-  background: #8d6e63;
+  background: #d7ccc8;
   position: relative;
 }
+  .footer{
+    position: relative;
+    bottom: 0;
+    background: #d7ccc8;
+    color: white;
+    /*height: 200px;*/
+  }
+  .Footer-col{
+    height: 300px;
+
+  }
+  .link{
+    color: white;
+  }
 </style>
