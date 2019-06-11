@@ -22,6 +22,7 @@ const devWebpackConfig = merge(baseWebpackConfig, {
 
   // these devServer options should be customized in /config/index.js
   devServer: {
+    inline: false,  // fixes webpack and vue error
     clientLogLevel: 'warning',
     historyApiFallback: {
       rewrites: [
