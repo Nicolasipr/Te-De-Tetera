@@ -3,7 +3,7 @@
         <h1>Products</h1>
         <b-container>
             <b-row>
-                <b-col md="4" v-bind:key="product.id" v-for="product in products">
+                <b-col  md="4" v-bind:key="product.id" v-for="product in products">
                     <ProductItem v-bind:product="product">
                     </ProductItem>
                 </b-col>

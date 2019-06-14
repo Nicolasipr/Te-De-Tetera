@@ -1,6 +1,6 @@
 <template>
     <div>
-        <b-container fluid>
+        <b-container fluid  class="Footer1">
             <b-row  class="container1">
                 <h1>Footer Section</h1>
             </b-row>
@@ -29,5 +29,8 @@
         text-align: center;
         color: white;
     }
-
+    .Footer1{
+        position: fixed;
+        bottom: 0px;
+    }
 </style>
