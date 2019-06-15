@@ -5,7 +5,7 @@
                 <h1>Footer Section</h1>
             </b-row>
             <b-row class="copyright">
-                <h5>Copyright 2019 Te de Tetera</h5>
+                <h5>Copyright 2019  Te de Tetera</h5>
             </b-row>
         </b-container>
     </div>
@@ -19,6 +19,9 @@
 </script>
 
 <style scooped>
+    h1 {
+        text-align: center;
+    }
     .container1 {
         background: #353535;
         color: white;
@@ -29,8 +32,8 @@
         text-align: center;
         color: white;
     }
-    .Footer1{
-        position: fixed;
+    .Footer1 {
+        position: relative;
         bottom: 0px;
     }
 </style>

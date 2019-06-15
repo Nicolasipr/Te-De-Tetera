@@ -1,5 +1,6 @@
 <template>
     <div>
+        <ProductFinder/>
         <Products v-bind:products="products">
         </Products>
     </div>
@@ -7,12 +8,14 @@
 
 <script>
     import Products from '@/components/products/Products'
+    import ProductFinder from '@/components/products/ProductFinder'
 
     import axios from 'axios'
     export default {
       name: 'ProductPage',
       components: {
-        Products
+        Products,
+        ProductFinder
       },
       data() {
         return {
