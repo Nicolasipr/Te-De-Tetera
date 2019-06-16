@@ -68,9 +68,10 @@ exports.product_find_name = function (req, res) {
 exports.product_all_details = function (req, res) {
    Product.find({})
      .populate('size')
-     .exec(function(err, products, size) {
-      console.log(products + size);
-  })
+     .exec( (err, product, size) => {
+       if(err)
+         console.log(product + size);
+     })
      .then(docs => {
        console.log(docs);
        res.status(200).json(docs);

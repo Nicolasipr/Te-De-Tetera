@@ -3,6 +3,8 @@ import Router from 'vue-router'
 import LandingPage from './views/LandingPage.vue'
 import ProductsPage from  './views/ProductsPage.vue'
 import SingleProduct from "./views/SingleProduct";
+import AdminProducts  from "./views/AdminProducts";
+
 import Admin from './views/Admin'
 
 Vue.use(Router)
@@ -25,9 +27,14 @@ export default new Router({
       component:  SingleProduct
     },
     {
-      path: '/users',
+      path: '/admin/users',
       name: 'Users',
       component: Admin
+    },
+    {
+      path: '/admin/products',
+      name: 'AdminProducts',
+      component: AdminProducts
     },
     {
       path: '/about',

@@ -10,7 +10,7 @@ router.post('/create/categories',product_controller.product_categories_create);
 
 
 router.get('/:id', product_controller.product_details);
-router.get('/', product_controller.product_all_details);
+router.get('/all', product_controller.product_all_details);
 router.get('/:id/categories', product_controller.product_categories_details);
 router.get('/find/:word', product_controller.product_find_name);
 router.put('/:id/update', product_controller.product_update);

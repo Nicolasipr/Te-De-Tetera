@@ -73,11 +73,11 @@
     name: "AddUsers",
     data() {
         return {
-          email: '',
-          firstName: '',
-          lastName:  '',
-          username: '',
-          password: ''
+          email: this.email,
+          firstName: this.firstName,
+          lastName:  this.lastName,
+          username: this.username,
+          password: this.password
         }
 
     },
@@ -85,7 +85,12 @@
       ...mapActions(['AddUser']),
       onSubmit(e) {
         e.preventDefault();
-        this.AddUser(this.email, this.firstName, this.lastName, this.username, bcrypt.hashSync(this.password, 10));
+        this.AddUser(this.email, this.firstName, this.lastName, this.username, this.password);
+
+      },
+      onReset(e) {
+        e.preventDefault();
+        this.AddUser("default@default.com", "Nicolas", "Perez", "niquito", "holahola123");
 
       }
     }
