@@ -19,18 +19,15 @@
                     </router-link>
                 </b-col>
                 <b-col md="4">
-                    Redes Sociales
                     <br>
                     <b-link class="icons" tag="li" href="https://www.facebook.com/tedetetera/">
-                        <FacebookIcon>
-                            Facebook
-                        </FacebookIcon>
+                        <FacebookIcon :size="48"/>
+                        Facebook
                     </b-link>
                     <br>
                     <b-link class="icons" tag="li" href="https://www.instagram.com/tedetetera/">
-                        <InstragramIcon>
+                        <InstragramIcon :size="48"/>
                             Instragram
-                        </InstragramIcon>
                     </b-link>
                 </b-col>
             </b-row>
