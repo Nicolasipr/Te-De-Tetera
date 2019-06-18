@@ -19,33 +19,64 @@ Explain about how this demo works on this Heroku site implementation [demo](http
 
 We are developing a Full-Stack web app with MEVN [MongoDB](https://www.mongodb.com/) [Express.js](https://expressjs.com)  [Vue.js](https://vuejs.org/)  [Node.js](https://nodejs.org) focusing in a noSQL ecommerce web app, using Vue.js as client side frontend, solving api request using express.js and mongoDB to fetch our requests.
 
-How to install it
+How to install it:
+
+First, you have to understand that you have to run the following task concurrently.
+
+
+In order to install server packages from packages.json you have to write the following instruction
+```
+npm install
 
 ```
-Some Code
+Now, if everything install correctly, you have to run the following command in order to run the 
+server API
+```
+npm run dev
 
 ```
+You should get the following terminal output:
+
+![alt-text](img/Screenshot%20from%202019-06-17%2014-03-00.png?raw=true)
+
+
+Second, you have to install the packages for Frontend side of the web application
 ```
-Some Code
+cd client
+npm install
 
 ```
+Once installed you're ready to check and modify the code as you want by running this 
+command concurrently in another terminal 
 ```
-Some Code
+npm run serve
 
 ```
-```
-Some Code
+You should get the following terminal output:
 
-```
+![alt-text](img/Screenshot%20from%202019-06-17%2014-03-20.png?raw=true)
+
 ## TO-DO
+### Backend 
 
 - [x] Creating Express and MongoDB connection 
-- [x] Vue init
-- [x] noSQL documents  
-- [ ] Vue routing 
+- [x] Mongo Atlas connection
+- [x] noSQL documents and collections 
+- [X] Creating API 
 - [ ] Vue frontend 
 - [ ] Testing 
 - [ ] Test 1
+
+### Frontend
+
+- [x] Vue init
+- [x] Vuex implementation
+- [x] axios request 
+- [x] Vue routing 
+- [ ] Vue frontend 
+- [ ] Testing 
+- [ ] Test 1
+
 
 ## Authors and Acknowledgment 
 
