@@ -1,5 +1,5 @@
 import axios from 'axios'
-const querystring = require('querystring');
+const querystring = require('qs');
 
 const headers = {
   'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'
@@ -19,7 +19,7 @@ const actions = {
     const response = await axios.get('http://localhost:3000/usuario/all');
     commit('setUsers', response.data)
   },
-  async AddUser({  commit }, email, firstName, lastName, username, password) {
+  async AddUsers({  commit }, {email, firstName, lastName, username, password}) {
     const response = await axios.post('http://localhost:3000/usuario',
         querystring.stringify(({
           email: email,
@@ -28,8 +28,8 @@ const actions = {
           username: username,
           password: password
       })),
-      headers
-    );
+      {headers}
+      );
 
     commit('newUser', response.date)
   }

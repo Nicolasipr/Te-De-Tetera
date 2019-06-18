@@ -1,7 +1,7 @@
 <template>
     <b-container>
         <h1> Add Users</h1>
-        <b-form @submit="onSubmit" @reset="onReset">
+        <b-form @submit="onSubmit" @reset="onReset" v-if="show">
             <b-form-group
                     id="input-group-1"
                     label="Email address:"
@@ -10,7 +10,7 @@
             >
                 <b-form-input
                         id="input-1"
-                        v-model="email"
+                        v-model="form.email"
                         type="email"
                         required
                         placeholder="Enter email"
@@ -20,7 +20,7 @@
             <b-form-group id="input-group-2" label="Your  First Name:" label-for="input-2">
                 <b-form-input
                         id="input-2"
-                        v-model="firstName"
+                        v-model="form.firstName"
                         required
                         placeholder="Enter  First name"
                 ></b-form-input>
@@ -29,7 +29,7 @@
             <b-form-group id="input-group-3" label="Your  Last Name:" label-for="input-3">
                 <b-form-input
                         id="input-3"
-                        v-model="lastName"
+                        v-model="form.lastName"
                         required
                         placeholder="Enter Last name"
                 ></b-form-input>
@@ -38,7 +38,7 @@
             <b-form-group id="input-group-4" label="Username:" label-for="input-4">
                 <b-form-input
                         id="input-4"
-                        v-model="username"
+                        v-model="form.username"
                         required
                         placeholder=" Enter Username Name"
                 ></b-form-input>
@@ -46,7 +46,7 @@
             <b-form-group >
                     <label for="text-password">Password</label>
                     <b-input
-                            v-model="password"
+                            v-model="form.password"
                             required
                             type="password"
                             id="text-password"
@@ -62,35 +62,48 @@
             <b-button type="submit" variant="primary">Submit</b-button>
             <b-button type="reset" variant="danger">Reset</b-button>
         </b-form>
+
+        <b-card class="mt-3" header="Form Data Result">
+            <pre class="m-0">{{ form }}</pre>
+        </b-card>
     </b-container>
 </template>
 
 <script>
     import { mapActions } from 'vuex';
 
-
   export default {
     name: "AddUsers",
     data() {
         return {
-          email: this.email,
-          firstName: this.firstName,
-          lastName:  this.lastName,
-          username: this.username,
-          password: this.password
+          form: {
+            email: "",
+            firstName: "",
+            lastName:  "",
+            username: "",
+            password: ""
+          },
+          show: true
+
         }
 
     },
     methods: {
-      ...mapActions(['AddUser']),
+      ...mapActions(['AddUsers']),
       onSubmit(e) {
         e.preventDefault();
-        this.AddUser(this.email, this.firstName, this.lastName, this.username, this.password);
+        this.AddUsers(this.form);
 
       },
       onReset(e) {
         e.preventDefault();
-        this.AddUser("default@default.com", "Nicolas", "Perez", "niquito", "holahola123");
+        this.form.email = '';
+        this.form.firstName = '';
+        this.form.lastName = '';
+        this.form.username = '';
+        this.form.password = '';
+
+
 
       }
     }

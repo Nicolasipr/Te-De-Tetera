@@ -1,5 +1,5 @@
 import axios from 'axios';
-const querystring = require('querystring');
+const querystring = require('qs');
 
 const headers = {
   'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'
@@ -22,16 +22,16 @@ const actions = {
     commit('setProducts', response.data)
   },
 
-  async AddProducts({  commit }, name, price, description, stock, size) {
+  async AddProducts({  commit },  {name, price, description, stock, size}) {
     const response = await axios.post('http://localhost:3000/products/create',
-      querystring.stringify(({
+      querystring.stringify({
         name: name,
         price: price,
         description: description,
         stock: stock,
         size: size
-      })),
-      headers
+      }, {encoded: true}),
+      {headers}
     );
 
     commit('newProduct', response.date)
