@@ -37,6 +37,10 @@ let usuarioSchema = new Schema({
         type: Boolean,
         default: true
     },
+    isAdmin: {
+        type: Boolean,
+        default: false
+    },
     createdAt: {
         type: String,
         default: new Date()
