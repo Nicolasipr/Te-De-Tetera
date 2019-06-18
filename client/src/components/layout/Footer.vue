@@ -1,19 +1,60 @@
 <template>
     <div>
         <b-container fluid  class="Footer1">
-            <b-row  class="container1">
-                <h1>Footer Section</h1>
+            <b-row  align-v="center" class="container1">
+                <b-col md="4">
+                    <br>
+                <h1> LOGO</h1>
+                    <br>
+                </b-col>
+                <b-col md="4">
+                    <router-link tag="li" to="/products">
+                        Products
+                    </router-link>
+                    <router-link tag="li" to="/contact">
+                        Contact Us
+                    </router-link>
+                    <router-link tag="li" to="/about">
+                        About Us
+                    </router-link>
+                </b-col>
+                <b-col md="4">
+                    Redes Sociales
+                    <br>
+                    <b-link class="icons" tag="li" href="https://www.facebook.com/tedetetera/">
+                        <FacebookIcon>
+                            Facebook
+                        </FacebookIcon>
+                    </b-link>
+                    <br>
+                    <b-link class="icons" tag="li" href="https://www.instagram.com/tedetetera/">
+                        <InstragramIcon>
+                            Instragram
+                        </InstragramIcon>
+                    </b-link>
+                </b-col>
             </b-row>
+
             <b-row class="copyright">
-                <h5>Copyright 2019  Te de Tetera</h5>
+                <b-col align-v="center">
+                    <h5>Copyright 2019  Te de Tetera</h5>
+                </b-col>
+
             </b-row>
         </b-container>
     </div>
 </template>
 
 <script>
+    import InstragramIcon from "vue-material-design-icons/Instagram"
+    import FacebookIcon from "vue-material-design-icons/Facebook"
+
     export default {
-      name: "Footer"
+      name: "Footer",
+      components: {
+        InstragramIcon,
+        FacebookIcon
+      }
     }
 
 </script>
@@ -23,17 +64,23 @@
         text-align: center;
     }
     .container1 {
-        background: #353535;
+        background: #bcaaa4;
         color: white;
         text-align: center;
+        list-style-type: none;
+
     }
     .copyright{
-        background: #7a7a7a;
+        background: #efdcd5;
         text-align: center;
         color: white;
     }
     .Footer1 {
         position: relative;
         bottom: 0px;
+    }
+    .icons {
+        list-style-type: none;
+        color: white;
     }
 </style>
