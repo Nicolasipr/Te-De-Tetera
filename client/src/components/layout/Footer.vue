@@ -34,7 +34,7 @@
 
             <b-row class="copyright">
                 <b-col align-v="center">
-                    <h5>Copyright 2019  Te de Tetera</h5>
+                    <h6>Copyright 2019 ® Te de Tetera</h6>
                 </b-col>
 
             </b-row>
@@ -68,13 +68,13 @@
 
     }
     .copyright{
-        background: #efdcd5;
+        background: #8c7b75;
         text-align: center;
         color: white;
     }
     .Footer1 {
-        position: relative;
-        bottom: 0px;
+        position: sticky;
+        bottom: 0;
     }
     .icons {
         list-style-type: none;

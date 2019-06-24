@@ -4,12 +4,13 @@
             <div class="card">
                 <img src="https://instagram.fscl8-1.fna.fbcdn.net/vp/f6998e25573ef6d12aefbda655f1922a/5D86DCB1/t51.2885-15/e35/s1080x1080/61310559_168660610814817_6050408677771382551_n.jpg?_nc_ht=instagram.fscl8-1.fna.fbcdn.net" :alt="product.title" class="card-img-top">
                 <div class="card-body">
-                    <h4 class="card-title">{{ product.title }}</h4>
-                    <div class="card-text">${{ product.id / 100 }}</div>
+                    <h4 class="card-title">{{ product.name }}</h4>
+                    <div class="card-subtitle">{{product.description}}</div>
                     <div class="row justify-content-end">
                         <button class="btn btn-primary">Add to cart</button>
                     </div>
                 </div>
+                <div class="card-footer">${{ product.price }}</div>
             </div>
         </div>
 <!--        <b-card-->
@@ -41,6 +42,8 @@
 </script>
 
 <style scooped>
-
+.card{
+    max-height: 500px;
+}
 </style>
 

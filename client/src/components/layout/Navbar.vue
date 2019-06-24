@@ -1,6 +1,6 @@
 <template>
     <div>
-        <b-navbar class="navbar" toggleable="lg" type="dark">
+        <b-navbar class="navbar navbar fixed-top" toggleable="lg" type="dark" fixed>
             <b-navbar-brand href="#">
                 <router-link tag="li" to="/">
                     Te de Tetera

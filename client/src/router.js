@@ -3,9 +3,9 @@ import Router from 'vue-router'
 import LandingPage from './views/LandingPage.vue'
 import ProductsPage from  './views/ProductsPage.vue'
 import SingleProduct from "./views/SingleProduct";
-import AdminProducts  from "./views/AdminProducts";
+import AdminProducts  from "./components/admin/AdminProducts";
 
-import Admin from './views/Admin'
+import Admin from './components/admin/AdminUsers'
 
 Vue.use(Router)
 

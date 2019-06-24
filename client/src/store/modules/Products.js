@@ -16,7 +16,7 @@ const getters = {
 const actions = {
   // eslint-disable-next-line no-unused-vars
   async fetchProducts({ commit }) {
-    const response = await axios.get('https://jsonplaceholder.typicode.com/todos');
+    const response = await axios.get('http://localhost:3000/products/all');
 
     // eslint-disable-next-line no-console
     commit('setProducts', response.data)

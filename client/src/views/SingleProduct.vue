@@ -45,7 +45,7 @@
         }
       },
       created() {  // this fetches data from given address
-        axios.get('https://jsonplaceholder.typicode.com/todos') // axios get function
+        axios.get('http://localhost:3000/products/all') // axios get function
           .then(res => this.products = res.data)
           // eslint-disable-next-line no-console
           .catch( err =>  console.log(err));
