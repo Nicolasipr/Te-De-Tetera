@@ -13,17 +13,17 @@
                 <b-navbar-nav>
                     <b-nav-item>
                         <router-link  tag="li" to="/products">
-                            Products
+                            {{$t("navBar.products",['products'])}}
                         </router-link>
                     </b-nav-item>
                     <b-nav-item>
                         <router-link  tag="li" to="/contact">
-                            Contact
+                            {{$t("navBar.contactUs",['contactUs'])}}
                         </router-link>
                     </b-nav-item>
                     <b-nav-item>
                         <router-link  tag="li" to="/about">
-                            About Us
+                            {{$t("navBar.aboutUs",['aboutUs'])}}
                         </router-link>
                     </b-nav-item>
 
@@ -37,13 +37,32 @@
                             <i class="material-icons">search</i>
                         </b-button>
                     </b-nav-form>
-
+<!--Language Dropwdown items, flags  icons and text-->
                     <b-nav-item-dropdown text="Lang" right>
                         <template slot="button-content"><em>
                             <i class="material-icons">language</i>
                         </em></template>
-                        <b-dropdown-item href="#">EN</b-dropdown-item>
-                        <b-dropdown-item href="#">ES</b-dropdown-item>
+                        <b-dropdown-item @click="setLang('en')" href="#" >
+                            <b-row class="justify-content-md-center">
+                                <b-col md="auto">
+                                    <country-flag country="gb" size="normal"/>
+                                </b-col>
+                                <b-col md="auto" align-self="center">
+                                    EN
+                                </b-col>
+                            </b-row>
+                        </b-dropdown-item>
+                        <b-dropdown-item @click="setLang('es')" href="#" >
+                            <b-row class="justify-content-md-center">
+                                <b-col md="auto">
+                                    <country-flag country="es" size="normal"/>
+                                </b-col>
+                                <b-col md="auto" align-self="center">
+                                    ES
+                                </b-col>
+                            </b-row>
+                        </b-dropdown-item>
+
                     </b-nav-item-dropdown>
 
                     <b-nav-item>
@@ -57,8 +76,8 @@
                         <template slot="button-content"><em>
                             <i class="material-icons">account_circle</i>
                         </em></template>
-                        <b-dropdown-item href="#">Profile</b-dropdown-item>
-                        <b-dropdown-item href="#">Sign Out</b-dropdown-item>
+                        <b-dropdown-item href="#"> {{$t("navBar.profile",['profile'])}}</b-dropdown-item>
+                        <b-dropdown-item href="#">{{$t("navBar.signOut",['signOut'])}}</b-dropdown-item>
                     </b-nav-item-dropdown>
                 </b-navbar-nav>
             </b-collapse>
@@ -67,8 +86,17 @@
 </template>
 
 <script>
-    export default {
-      name: "Navbar"
+  import i18n from '../../locales/language'
+  import CountryFlag from 'vue-country-flag'
+
+  export default {
+    name: "Navbar",
+    components: {CountryFlag},
+    methods: {
+        setLang: function (lang) {
+          this.$i18n.locale = lang;
+        }
+      }
     }
 
 </script>
