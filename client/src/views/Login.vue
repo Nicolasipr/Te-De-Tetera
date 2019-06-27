@@ -1,69 +1,90 @@
-<template>
-  <div class="wrapper">
-    <div class="section page-header header-filter" :style="headerStyle">
-      <div class="container">
-        <div class="md-layout">
-          <div
-            class="md-layout-item md-size-33 md-small-size-66 md-xsmall-size-100 md-medium-size-40 mx-auto"
-          >
-            <login-card header-color="green">
-              <h4 slot="title" class="card-title">Login</h4>
-              <md-button
-                slot="buttons"
-                href="javascript:void(0)"
-                class="md-just-icon md-simple md-white"
-              >
-                <i class="fab fa-facebook-square"></i>
-              </md-button>
-              <md-button
-                slot="buttons"
-                href="javascript:void(0)"
-                class="md-just-icon md-simple md-white"
-              >
-                <i class="fab fa-twitter"></i>
-              </md-button>
-              <md-button
-                slot="buttons"
-                href="javascript:void(0)"
-                class="md-just-icon md-simple md-white"
-              >
-                <i class="fab fa-google-plus-g"></i>
-              </md-button>
-              <p slot="description" class="description">Or Be Classical</p>
-              <md-field class="md-form-group" slot="inputs">
-                <md-icon>face</md-icon>
-                <label>First Name...</label>
-                <md-input v-model="firstname"></md-input>
-              </md-field>
-              <md-field class="md-form-group" slot="inputs">
-                <md-icon>email</md-icon>
-                <label>Email...</label>
-                <md-input v-model="email" type="email"></md-input>
-              </md-field>
-              <md-field class="md-form-group" slot="inputs">
-                <md-icon>lock_outline</md-icon>
-                <label>Password...</label>
-                <md-input v-model="password"></md-input>
-              </md-field>
-              <md-button slot="footer" class="md-simple md-success md-lg">
-                Get Started
-              </md-button>
-            </login-card>
+<template class="backGround">
+  <b-container class="logincard">
+    <div>
+      <div >
+        <b-container class="container">
+          <div>
+            <div>
+              <login-card header-color="green">
+                <h4 slot="title" class="card-title">Login</h4>
+                <b-button
+                        slot="buttons"
+                        href="javascript:void(0)"
+                        class="md-just-icon md-simple md-white"
+                >
+                  <FacebookIcon :size="48"/>
+                </b-button>
+                <b-button
+                        slot="buttons"
+                        href="javascript:void(0)"
+                        class="md-just-icon md-simple md-white"
+                >
+                  <InstragramIcon :size="48"/>
+                </b-button>
+                <b-button
+                        slot="buttons"
+                        href="javascript:void(0)"
+                        class="md-just-icon md-simple md-white"
+                >
+                  <GooglePlusIcon :size="48"/>
+                </b-button>
+                <b-button
+                        slot="buttons"
+                        href="javascript:void(0)"
+                        class="md-just-icon md-simple md-white"
+                >
+                  <TwitterIcon :size="48" />
+                </b-button>
+                <b-form-group class="md-form-group" slot="inputs">
+                  <i class="material-icons login">account_circle</i>
+                  <br>
+                  <label>First Name...</label>
+                  <b-input v-model="firstname"></b-input>
+                </b-form-group>
+                <b-form class="md-form-group" slot="inputs">
+                  <i  class="material-icons">email</i>
+                  <br>
+                  <label>Email...</label>
+                  <b-input v-model="email" type="email"></b-input>
+                </b-form>
+                <b-form class="md-form-group" slot="inputs">
+                  <i class="material-icons ">lock_outline</i>
+                  <br>
+                  <label>Password...</label>
+                  <b-input v-model="password"></b-input>
+                </b-form>
+                <b-button slot="footer" class="md-simple md-success md-lg">
+                  Get Started
+                </b-button>
+              </login-card>
+            </div>
           </div>
-        </div>
+        </b-container>
       </div>
     </div>
-  </div>
+  </b-container>
 </template>
 
 <script>
-import { LoginCard } from "@/components";
+import LoginCard from "../components/login/LoginCard";
+import InstragramIcon from "vue-material-design-icons/Instagram"
+import FacebookIcon from "vue-material-design-icons/Facebook"
+import TwitterIcon from "vue-material-design-icons/Twitter"
+import GooglePlusIcon from "vue-material-design-icons/GooglePlus"
+
+
 
 export default {
+  name: 'LoginPage',
   components: {
-    LoginCard
+    LoginCard,
+    InstragramIcon,
+    FacebookIcon,
+    GooglePlusIcon,
+    TwitterIcon
+
   },
-  bodyClass: "login-page",
+  // bodyClass: "login-page",
   data() {
     return {
       firstname: null,
@@ -74,7 +95,7 @@ export default {
   props: {
     header: {
       type: String,
-      default: require("@/assets/img/profile_city.jpg")
+      default: ""
     }
   },
   computed: {
@@ -87,4 +108,17 @@ export default {
 };
 </script>
 
-<style lang="css"></style>
+<style lang="css" scooped>
+  .backGround {
+    background-color: aqua;
+  }
+  .logincard {
+    margin-top: auto;
+    padding-top: 200px;
+    padding-bottom: 200px;
+    max-width: 500px;
+  }
+  .login{
+    font-size: 48px;
+  }
+</style>

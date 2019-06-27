@@ -1,21 +1,21 @@
 <template>
-  <md-card class="md-card-login" :class="{ 'md-card-hidden': cardHidden }">
-    <md-card-header :class="getClass(headerColor)">
+  <b-card class="md-card-login" :class="{ 'md-card-hidden': cardHidden }">
+    <b-card-header :class="getClass(headerColor)">
       <slot name="title"></slot>
       <div class="social-line">
         <slot name="buttons"></slot>
       </div>
-    </md-card-header>
+    </b-card-header>
 
-    <md-card-content>
+    <b-card-text>
       <slot name="description"></slot>
       <slot name="inputs"></slot>
-    </md-card-content>
+    </b-card-text>
 
-    <md-card-actions>
+    <b-card-footer>
       <slot name="footer"></slot>
-    </md-card-actions>
-  </md-card>
+    </b-card-footer>
+  </b-card>
 </template>
 
 <script>
