@@ -1,3 +1,25 @@
 {
-  "message": "hello i18n !!"
+  "navBar": {
+    "title": "Te de Tetera",
+    "products": "Products",
+    "contactUs": "Contact",
+    "aboutUs": "About Us",
+    "search": "Search",
+    "profile": "Profile",
+    "signIn":  "Sign In",
+    "signOut": "Sign Out",
+    "logIn": "Log In"
+
+  },
+  "carousel": {
+    "welcome": "Welcome to Te de Tetera"
+  },
+  "landingPage": {
+    "teaSet": "Tea sets",
+    "teapots": "Teapots",
+    "mugs": "Tea Cups"
+  },
+  "footer": {
+
+  }
 }

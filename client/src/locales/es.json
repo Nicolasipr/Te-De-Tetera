@@ -1,0 +1,25 @@
+{
+  "navBar": {
+    "title": "Te de Tetera",
+    "products": "Productos",
+    "contactUs": "Contacto",
+    "aboutUs": "Nosotros",
+    "search": "Buscar",
+    "profile": "Perfil",
+    "signIn":  "Ingresar",
+    "signOut": "Salir",
+    "logIn": "Registrarse"
+
+  },
+  "carousel": {
+    "welcome": "Bienvenidos a  Te de Tetera"
+  },
+  "landingPage": {
+    "teaSet": "Sets de Té",
+    "teapots": "Teteras",
+    "mugs": "Tazas"
+  },
+  "footer": {
+
+  }
+}
